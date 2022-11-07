@@ -1,0 +1,91 @@
+        <main>
+            <div class="video video-principal">.</div>    
+            <section>
+                <h2 class="titulo-video-principal">Título do vídeo de destaque</h2>
+                <p class="visualizacoes">18 mil visualizações</p>
+                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eos facilis totam vitae? Blanditiis eius, voluptatum laudantium fugiat inventore veritatis praesentium eligendi corrupti iste cumque, incidunt odio voluptas ab non?</p>
+            </section>
+        </main>
+        <aside>
+            <section class="propaganda">
+                <p>propaganda</p>
+            </section>
+            <section class="secoes-videos">
+                <div class="boxvideo">
+                    <div class="video video-2">.</div>
+                    <div class="informacoes">
+                        <h2 class="titulo-video-2">Um título de video grande</h2>
+                        <p class="autor">Roberto Dias</p>
+                        <p class="visualizacoes">23 mil visualizações</p>
+                        <p class="data">Há 3 semanas</p>
+                    </div>
+                </div>
+                <div class="boxvideo">
+                    <div class="video video-2">.</div>
+                    <div class="informacoes">
+                        <h2 class="titulo-video-2">Um título de video grande</h2>
+                        <p class="autor">Roberto Dias</p>
+                        <p class="visualizacoes">23 mil visualizações</p>
+                        <p class="data">Há 3 semanas</p>
+                    </div>
+                </div>
+                <div class="boxvideo">
+                    <div class="video video-2">.</div>
+                    <div class="informacoes">
+                        <h2 class="titulo-video-2">Um título de video grande</h2>
+                        <p class="autor">Roberto Dias</p>
+                        <p class="visualizacoes">23 mil visualizações</p>
+                        <p class="data">Há 3 semanas</p>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+
+
+*{margin: 0;padding: 0;}
+
+.video, .propaganda{
+    background-color: gray;
+    height: 30vh;
+}
+.video-2, .propaganda{
+    height: 100%;
+    height: 10vh;
+}
+body{
+    background-color: rgb(247, 247, 247);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+main section .titulo-video-principal, .visualizacoes{
+    margin: 15px 0;
+}
+
+.video.video-2{grid-area: video-2; width: 200px;}
+.informacoes{grid-area: informacoes;}
+
+.titulo-video-2{
+    font-size: 16px;
+}
+
+aside{
+    display: grid;
+    grid-gap: 20px;
+}
+.secoes-videos{
+    display: grid;
+    grid-gap: 20px;
+}
+.boxvideo{
+    display: grid;
+    grid-template-areas: 
+    "video-2 informacoes"
+    ;
+}
+.informacoes{
+    display: flex;
+    flex-direction: column;
+}
